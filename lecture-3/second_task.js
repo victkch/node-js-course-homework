@@ -3,7 +3,7 @@ const readline = require('readline').createInterface({
     output: process.stdout
   });
 let romanLettersArray=['M','D','C','L','X','V','I'];
-let arabicNumbersArray=['1000','500','100','50','10','5','1'];
+let arabicNumbersArray=[1000,500,100,50,10,5,1];
 function getNumberDigits(numberLetters)//ищем каждой букве числа численный эквивалент
 { 
     let numberDigits=[];
