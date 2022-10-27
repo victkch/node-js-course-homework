@@ -11,8 +11,7 @@ let toInputNumber=function(){
       toInputNumber();
     }
     else {
-      let digitsArray=inputNumberString.split('');//делим строку на массив
-      console.log(`Entered digits: ${digitsArray[0]} ${digitsArray[1]}`);
+      console.log(`Entered digits: ${inputNumberString[0]} ${inputNumberString[1]}`);
       return readline.close();
     }    
   });
