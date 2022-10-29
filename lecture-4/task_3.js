@@ -9,7 +9,7 @@ function createBase(addBaseNumber) {
 }
 let toInputNumber = function () {readline.question("Enter a number - ", inputNumberString => {
     let addSix = createBase(6);
-    let addResult=addSix(Number(inputNumberString))
+    let addResult=addSix(Number(inputNumberString));
     console.log(`Result: ${inputNumberString} + 6 = ${addResult}`);
     return readline.close();
   });
