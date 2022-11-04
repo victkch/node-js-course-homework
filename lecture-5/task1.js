@@ -28,9 +28,9 @@ function compareTwoObjects(object1,object2)
 function findValueByItsKey(object,key)
 {
     let flag=0;
-    for(const KEY in object)
+    for(const objectKey in object)
     {
-        if(KEY===key)
+        if(objectKey===key)
         {
             flag=1;
             break;
