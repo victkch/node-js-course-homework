@@ -225,11 +225,13 @@ function calculateSimilarElem(resultPolyn: Array<string>): string {
       } else sum += 1;
     }
   }
-  if (sum > 0) {
+  if (sum > 1) {
     resArr.push(`+${sum}x`);
-  } else if (sum === 0) {
+  } else if (sum === 1) {
     resArr.push("x");
-  } else resArr.push(`${sum}x`);
+  } else if (sum < 0) {
+    resArr.push(`${sum}x`);
+  }
   sum = 0;
   for (let i = 0; i < arrOfNum.length; i++) {
     if (arrOfNum[i][0] === "+") {
@@ -240,7 +242,9 @@ function calculateSimilarElem(resultPolyn: Array<string>): string {
   }
   if (sum > 0) {
     resArr.push(`+${sum}`);
-  } else resArr.push(`${sum}`);
+  } else if (sum < 0) {
+    resArr.push(`${sum}`);
+  }
   return resArr.join("");
 }
 let multiplyTwoPolyn = function (): void {
